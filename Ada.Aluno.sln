@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1704.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{3674ED35-A6A2-4571-A4AF-6B5BAFB82686}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{7685DD62-475E-4E36-8391-D92533DA801D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Core", "3 - Core", "{AAE9F6C3-9D8A-4D37-A0E7-A0C0EC7969AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{6FB98DB9-9685-4C5E-870D-9462479B9915}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ada.Aluno.Core", "src\Ada.Aluno.Core\Ada.Aluno.Core.csproj", "{51427C38-3765-4E38-B9A1-7878A979101A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ada.Aluno.Application", "src\Ada.Aluno.Application\Ada.Aluno.Application.csproj", "{6A9F625F-DA9C-49F6-AB8C-5248305C5CF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ada.Aluno.Presentation", "src\Ada.Aluno.Presentation\Ada.Aluno.Presentation.csproj", "{46EE39FD-61C5-4368-A6D0-1C4A7E9A3424}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ada.Aluno.Database", "Ada.Aluno.Database\Ada.Aluno.Database.csproj", "{427ADEDE-0B49-4942-AC30-CD70EF74F71C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51427C38-3765-4E38-B9A1-7878A979101A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51427C38-3765-4E38-B9A1-7878A979101A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51427C38-3765-4E38-B9A1-7878A979101A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51427C38-3765-4E38-B9A1-7878A979101A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A9F625F-DA9C-49F6-AB8C-5248305C5CF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A9F625F-DA9C-49F6-AB8C-5248305C5CF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A9F625F-DA9C-49F6-AB8C-5248305C5CF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A9F625F-DA9C-49F6-AB8C-5248305C5CF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46EE39FD-61C5-4368-A6D0-1C4A7E9A3424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46EE39FD-61C5-4368-A6D0-1C4A7E9A3424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46EE39FD-61C5-4368-A6D0-1C4A7E9A3424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46EE39FD-61C5-4368-A6D0-1C4A7E9A3424}.Release|Any CPU.Build.0 = Release|Any CPU
+		{427ADEDE-0B49-4942-AC30-CD70EF74F71C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{427ADEDE-0B49-4942-AC30-CD70EF74F71C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{427ADEDE-0B49-4942-AC30-CD70EF74F71C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{427ADEDE-0B49-4942-AC30-CD70EF74F71C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5F21325-81FF-4750-AB77-18954F324876}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{51427C38-3765-4E38-B9A1-7878A979101A} = {AAE9F6C3-9D8A-4D37-A0E7-A0C0EC7969AD}
+		{6A9F625F-DA9C-49F6-AB8C-5248305C5CF1} = {7685DD62-475E-4E36-8391-D92533DA801D}
+		{46EE39FD-61C5-4368-A6D0-1C4A7E9A3424} = {3674ED35-A6A2-4571-A4AF-6B5BAFB82686}
+		{427ADEDE-0B49-4942-AC30-CD70EF74F71C} = {6FB98DB9-9685-4C5E-870D-9462479B9915}
+	EndGlobalSection
+EndGlobal
