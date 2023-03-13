@@ -22,7 +22,7 @@ builder.Services.AddControllers(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<MinhaConexao>(x => new MinhaConexao(
+builder.Services.AddScoped<AlunoContext>(x => new AlunoContext(
     builder.Configuration.GetConnectionString("AdaAlunosDatabase")
 ));
 

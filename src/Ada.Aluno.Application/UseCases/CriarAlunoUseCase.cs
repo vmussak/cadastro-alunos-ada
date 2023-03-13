@@ -33,7 +33,7 @@ namespace Ada.Aluno.Application.UseCases
 				};
 			}
 
-			_alunoRepository.Adicionar(aluno);
+			aluno = _alunoRepository.Adicionar(aluno);
 
             return new ApiResponse
 			{

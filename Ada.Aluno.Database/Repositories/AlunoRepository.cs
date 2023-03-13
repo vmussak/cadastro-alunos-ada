@@ -1,48 +1,39 @@
 ﻿using System;
 using Ada.Aluno.Application.Interfaces.Repositories;
+using Ada.Aluno.Database.Mappings;
 
 namespace Ada.Aluno.Database.Repositories
 {
 	public class AlunoRepository : IAlunoRepository
 	{
-        private readonly MinhaConexao _conexao;
-		public AlunoRepository(MinhaConexao conexao)
+        private readonly AlunoContext _db;
+        public AlunoRepository(AlunoContext db)
 		{
-            _conexao = conexao;
+            _db = db;
 		}
 
-        public void Adicionar(Core.Aluno aluno)
+        public Core.Aluno Adicionar(Core.Aluno aluno)
         {
-            using var command = _conexao.CreateCommand();
-            
-            command.CommandText = "INSERT INTO Aluno (Nome, Cidade, NomeDaMae)" +
-                $" VALUES  ('{aluno.Nome}', '{aluno.Cidade}', '{aluno.NomeMae}')";
+            var alunoModel = aluno.ToModel();
 
-            command.ExecuteNonQuery();
+            _db.Add(alunoModel);
+            _db.SaveChanges();
+
+            return alunoModel.ToCore();
         }
 
         public List<Core.Aluno> BuscarTodos()
         {
-            var listaDeAlunos = new List<Core.Aluno>();
+            return _db.Alunos
+                .Select(x => x.ToCore())
+                .ToList();
+        }
 
-            using var command = _conexao.CreateCommand();
-
-            command.CommandText = "SELECT * FROM Aluno";
-
-            using var reader = command.ExecuteReader();
-
-            while (reader.Read())
-            {
-                listaDeAlunos.Add(new Core.Aluno
-                {
-                    Id = (int)reader["Id"],
-                    Nome = reader["Nome"].ToString()!,
-                    Cidade = reader["Cidade"].ToString()!,
-                    NomeMae = reader["NomeDaMae"]?.ToString()
-                });
-            }
-
-            return listaDeAlunos;
+        public Core.Aluno? BuscarPorId(int id)
+        {
+            return _db.Alunos
+                .FirstOrDefault(x => x.Id == id)
+                ?.ToCore();
         }
     }
 }

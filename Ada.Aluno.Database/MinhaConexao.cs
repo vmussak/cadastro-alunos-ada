@@ -13,6 +13,10 @@ namespace Ada.Aluno.Database
             _connection.Open();
 		}
 
+
+        //DbContext
+
+
         public SqlCommand CreateCommand()
         {
             return _connection.CreateCommand();
